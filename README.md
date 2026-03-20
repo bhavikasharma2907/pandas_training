@@ -4,19 +4,19 @@ This repository demonstrates the use of Pandas, a powerful Python library for an
 
 📌 Features
 
-Create DataFrames from lists or dictionaries
+-Create DataFrames from lists or dictionaries
 
-Inspect data using head(), tail(), shape, columns, and info()
+-Inspect data using head(), tail(), shape, columns, and info()
 
-Perform row and column operations (add, update, delete)
+-Perform row and column operations (add, update, delete)
 
-Filter data using conditions (loc, where)
+-Filter data using conditions (loc, where)
 
-Handle missing values and NaNs
+-Handle missing values and NaNs
 
-Work with dates using pd.to_datetime() and Timedelta
+-Work with dates using pd.to_datetime() and Timedelta
 
-Save and load CSV files
+-Save and load CSV files
 
 🛠️ Installation
 !pip install pandas
@@ -25,8 +25,11 @@ Check version:
 
 import pandas as pd
 print(pd.__version__)
+
 💻 Example Code
-Create DataFrame
+
+#Create DataFrame
+
 import pandas as pd
 
 data = {'Name':['Madhav','Vishakha','Lalita','Hrishabh'],
@@ -34,29 +37,41 @@ data = {'Name':['Madhav','Vishakha','Lalita','Hrishabh'],
         'salary':[90000,70000,80000,50000]}
 df = pd.DataFrame(data)
 print(df)
-Basic Operations
+
+#Basic Operations
+
 df.head(2)           # First 2 rows
+
 df.tail(2)           # Last 2 rows
+
 df.rename(columns={'salary':'Monthly_salary'}, inplace=True)
+
 df['Bonus'] = df['Monthly_salary']*0.2
+
 df['DOJ'] = pd.to_datetime(['2024-01-01','2024-01-15','2024-03-28','2024-03-03'])
-Filtering
+
+#Filtering
+
 df[df['age']>=18]
 df[(df['age']>=18) & (df['Monthly_salary']>=50000)]
-Save & Load CSV
+
+#Save & Load CSV
+
 df.to_csv('Test_data.csv', index=False)
+
 load_df = pd.read_csv('Test_data.csv')
+
 📖 Learning Outcomes
 
-DataFrame creation and inspection
+-DataFrame creation and inspection
 
-Row and column selection and operations
+-Row and column selection and operations
 
-Filtering and conditional operations
+-Filtering and conditional operations
 
-Handling missing values and dates
+-Handling missing values and dates
 
-Reading and writing CSV files
+-Reading and writing CSV files
 
 👨‍💻 Author
 
